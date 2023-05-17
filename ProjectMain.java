@@ -13,7 +13,7 @@ public class ProjectMain {
 		
 		System.out.println("Enter number of partitions: ");
 		M = read.nextInt();
-		array=new Process[M];
+		array=new Process[M]; 
 
 		int start=0;
 		
