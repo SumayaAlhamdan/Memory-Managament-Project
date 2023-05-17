@@ -9,14 +9,22 @@ public class ProjectMain {
 		Scanner read = new Scanner( System.in );
 		int M;
 		char alo;
+		Process array[];
 		
 		System.out.println("Enter number of partitions: ");
 		M = read.nextInt();
+		array=new Process[M];
+
+		int start=0;
 		
 		for( int i = 0 ; i < M ; i++) {
 		System.out.println("Enter the size of partition " + (i+1) + " in KB: ");
 		int s = read.nextInt();
+		int end= start+s;
 		//set size of partition here
+		array[i]=new Process(s,start,end);
+		start=end+1;
+
 		}
 		
 		System.out.println("Enter allocation strategy ( F:First-fit , B:Best-fit, W;Worst-fit ): ");

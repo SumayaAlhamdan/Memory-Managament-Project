@@ -1,0 +1,20 @@
+public class Process{
+    public String pStatus;
+    public int pSize;
+    public int start;
+    public int end;
+    public String ID;
+    public int fSize;
+
+
+    public Process(int size,int sAddress,int eAddress){
+        pStatus="free";
+        pSize=size;
+        start=sAddress;
+        end=eAddress;
+        ID="Null";
+        fSize=-1;
+    }
+
+
+}
