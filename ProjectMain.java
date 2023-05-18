@@ -49,17 +49,17 @@ public class ProjectMain {
 				int processSize=read.nextInt();
 				System.out.println("enter process ID");
 				String pID=read.next();
-				firstFit(processSize,pID);
+				
 				switch(alo) {
 				
-				case 1:
-		          
+				case 'F':
+		          firstFit(processSize,pID);
 					break;
-				case 2:
-				
+				case 'B':
+					bestFit(processSize,pID);
 					break;
-				case 3:
-				
+				case 'W':
+					worstFit(processSize,pID);
 					break;
 				}//switch
 
@@ -76,14 +76,30 @@ public class ProjectMain {
 		}while(x!=4);
 		
 	}//main
-	public static firstFit(int size,pId){
+
+
+	public static boolean firstFit(int size,pId){
+		boolean check=false;
 		for(int i=0;i<array.length; i++){
 			if(array[i].pSize>= size){
 				array[i].allocate(size,pId);
+				check=true;
+                return check;
+		
 			}
 
 		}
+		return check;
 	}
+
+	public static boolean bestFit(int size,pId){
+
+	}
+
+	public static boolean worstFit(int size,pId){
+		
+	}
+
 }//class
 //test commit
 //testttt
