@@ -13,7 +13,7 @@ public class ProjectMain {
 		
 		System.out.println("Enter number of partitions: ");
 		M = read.nextInt();
-		array=new Process[M]; 
+		array=new Process[M];
 
 		int start=0; //50
 		
@@ -45,6 +45,24 @@ public class ProjectMain {
 			
 			case 1:
 				//allocating method
+		        System.out.println("enter process size in KB");
+				int processSize=read.nextInt();
+				System.out.println("enter process ID");
+				String pID=read.next();
+				firstFit(processSize,pID);
+				switch(alo) {
+				
+				case 1:
+		          
+					break;
+				case 2:
+				
+					break;
+				case 3:
+				
+					break;
+				}//switch
+
 				break;
 			case 2:
 				//de-allocating method
@@ -58,7 +76,7 @@ public class ProjectMain {
 		}while(x!=4);
 		
 	}//main
-	public static fitFirst(int size,pId){
+	public static firstFit(int size,pId){
 		for(int i=0;i<array.length; i++){
 			if(array[i].pSize>= size){
 				array[i].allocate(size,pId);
