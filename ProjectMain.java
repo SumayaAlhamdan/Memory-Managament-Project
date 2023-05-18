@@ -15,17 +15,17 @@ public class ProjectMain {
 		
 		System.out.println("Enter number of partitions: ");
 		M = read.nextInt();
-		array=new Process[M]; 
+		array=new Process[M];
 
-		int start=0;
+		int start=0; //50
 		
 		for( int i = 0 ; i < M ; i++) {
 		System.out.println("Enter the size of partition " + (i+1) + " in KB: ");
-		int s = read.nextInt();
-		int end= start+s;
+		int s = read.nextInt(); //50
+		int end= start+s-1; //49  74
 		//set size of partition here
 		array[i]=new Process(s,start,end);
-		start=end+1;
+		start=end+1; //75
 
 		}
 		
@@ -55,12 +55,6 @@ public class ProjectMain {
 				// intialize process
 				Process process = new Process(SP, /*start and end addresses*/  ) ; 
 				//allocating method
-				switch() {
-					case 'F': //call method
-					case 'B': // 
-					case 'W': // 
-					break; 
-				}
 				break;
 			case 2:
 				// input process ID to de allocate 
@@ -79,21 +73,6 @@ public class ProjectMain {
 		
 	}//main
 
-public boolean First_Fit(){/ / first hole thats big enough
-if ( pStatus = false & /* check if array can handle */ )
-// loop through the array to find 1st hole thats best enough 
-}	
-
-public boolean Best_Fit(){ // smallest hole thats big enough
-
-
-}
-
-public boolean Worst_Fit(){ //largest hole
-
-
-}
-
-} //class
+}//class
 //test commit
 //testttt 

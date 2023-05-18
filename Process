@@ -16,5 +16,12 @@ public class Process{
         fSize=-1;
     }
 
+    public allocate(int size,String id){
+        pStatus="allocated";
+        ID=id;
+        fSize=pSize-size;
+    }
+
+
 
 }
