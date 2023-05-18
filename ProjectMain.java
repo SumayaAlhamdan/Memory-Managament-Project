@@ -15,15 +15,15 @@ public class ProjectMain {
 		M = read.nextInt();
 		array=new Process[M]; 
 
-		int start=0;
+		int start=0; //50
 		
 		for( int i = 0 ; i < M ; i++) {
 		System.out.println("Enter the size of partition " + (i+1) + " in KB: ");
-		int s = read.nextInt();
-		int end= start+s;
+		int s = read.nextInt(); //50
+		int end= start+s-1; //49  74
 		//set size of partition here
 		array[i]=new Process(s,start,end);
-		start=end+1;
+		start=end+1; //75
 
 		}
 		
@@ -58,7 +58,14 @@ public class ProjectMain {
 		}while(x!=4);
 		
 	}//main
+	public static fitFirst(int size,pId){
+		for(int i=0;i<array.length; i++){
+			if(array[i].pSize>= size){
+				array[i].allocate(size,pId);
+			}
 
+		}
+	}
 }//class
 //test commit
 //testttt
